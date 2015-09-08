@@ -160,6 +160,7 @@ public:
 
 public: // overridden from Writer
   virtual std::string write(const Value& root);
+  std::string writeOmitEndingLineFeed(const Value& root);
 
 private:
   void writeValue(const Value& value);

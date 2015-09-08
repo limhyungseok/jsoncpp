@@ -302,6 +302,13 @@ std::string FastWriter::write(const Value& root) {
   return document_;
 }
 
+std::string FastWriter::writeOmitEndingLineFeed(const Value& root)
+{
+  document_ = "";
+  writeValue(root);
+  return document_;
+}
+
 void FastWriter::writeValue(const Value& value) {
   switch (value.type()) {
   case nullValue:
